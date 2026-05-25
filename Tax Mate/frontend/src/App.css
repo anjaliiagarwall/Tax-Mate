@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--background);
+  color: var(--foreground);
+  height: 100vh;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: var(--background);
+}
+
+.auth-card {
+  background: var(--card);
+  padding: var(--spacing-xl) var(--spacing-xl);
+  width: 1000px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  border: 1px solid var(--border);
+  color: var(--card-foreground);
+}
+
+.auth-card h2 {
+  margin-bottom: var(--spacing-lg);
+  color: var(--foreground);
+  font-size: 48px;
+}
+
+.auth-card p {
+  margin-bottom: var(--spacing-lg);
+  font-size: 24px;
+  color: var(--muted-foreground);
+}
+
+.auth-card input {
+  width: 100%;
+  padding: var(--spacing-lg) var(--spacing-lg);
+  margin: var(--spacing-md) 0;
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  font-size: 24px;
+  box-sizing: border-box;
+  background-color: var(--secondary);
+  color: var(--foreground);
+}
+
+.auth-card button {
+  width: 100%;
+  padding: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.auth-card button:hover {
+  background: var(--accent);
+  color: var(--accent-foreground);
+  box-shadow: var(--shadow-md);
+}
+
+.auth-card a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.auth-link {
+  margin-top: var(--spacing-lg);
+  font-size: 20px;
+}
+
+/* Password Toggle Styles removed to prevent conflict with global.css */

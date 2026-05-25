@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "fallback_usr_admin",
+    "name": "System Admin",
+    "email": "admin123@gmail.com",
+    "password": "$2b$10$ZWWUr3fsty4jLPhB4unr7eXeFetdIlGs0CBYqACxk/DhS6OFbBmS2",
+    "role": "admin"
+  },
+  {
+    "_id": "fallback_usr_user",
+    "name": "Default User",
+    "email": "user123@gmail.com",
+    "password": "$2b$10$zDQDkyWdepYi8inWbcbXfeZsd5Gr1zjwCEgildmPQggzHj/GdPXv2",
+    "role": "user"
+  },
+  {
+    "name": "Default Admin",
+    "email": "anjali0804@gmail.com",
+    "password": "$2b$10$fRW8vmMjhMd7h8faZguvqeUZ.b8CyZfgeHVo49ug5TuSvK72GjVTO",
+    "role": "admin",
+    "_id": "fallback_usr_ekm5uvvgr"
+  },
+  {
+    "name": "Test User",
+    "email": "testlogin@gmail.com",
+    "password": "$2b$10$WGGbJ/F/ZUlGVdunYcNvuOID6ljaDXMBH2Jxcow0KfYo6j7nwlI6K",
+    "role": "user",
+    "_id": "fallback_usr_pcyfbxo1a"
+  }
+]

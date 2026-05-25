@@ -1,0 +1,410 @@
+/* Calculator.css */
+.calculator-container {
+  max-width: 95%;
+  margin: 60px auto;
+  padding: 60px;
+  background: var(--background);
+  color: var(--foreground);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-size: 48px;
+  text-align: center;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* Tabs Styles */
+.calc-tabs {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--border);
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 24px;
+  color: var(--muted-foreground);
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-bottom: 4px solid transparent;
+}
+
+.tab-btn:hover {
+  color: var(--foreground);
+}
+
+.tab-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+.tab-content {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Input Rows */
+.input-row {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.input-row .input-group {
+  flex: 1;
+}
+
+.regime-selection {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.regime-switch {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.regime-switch button {
+  padding: 20px 40px;
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  background: var(--card);
+  color: var(--muted-foreground);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 22px;
+  transition: all 0.2s;
+  min-width: 200px;
+}
+
+.regime-switch .active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-md);
+}
+
+.deductions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.input-group {
+  background: var(--card);
+  padding: 30px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.label-row label,
+label {
+  font-size: 20px;
+  color: var(--foreground);
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* Tooltip Styles */
+.tooltip {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: help;
+}
+
+.info-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--muted-foreground);
+  color: var(--muted-foreground);
+  font-size: 16px;
+  font-family: serif;
+  font-weight: bold;
+  font-style: italic;
+  transition: all 0.2s;
+}
+
+.tooltip:hover .info-icon {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: var(--accent);
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 300px;
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+  text-align: center;
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  font-size: 16px;
+  position: absolute;
+  z-index: 10;
+  bottom: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  pointer-events: none;
+  line-height: 1.5;
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: var(--popover) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 20px 24px;
+  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  background: var(--secondary);
+  color: var(--foreground);
+  font-size: 22px;
+  outline: none;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Nav Buttons */
+.nav-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 2px solid var(--border);
+}
+
+.nav-btn {
+  padding: 20px 40px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--secondary);
+  color: var(--foreground);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.nav-btn:hover {
+  background: var(--muted);
+}
+
+.nav-btn.next {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.nav-btn.next:hover {
+  background: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.calculate-btn {
+  padding: 20px 50px;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: none;
+  border-radius: var(--radius);
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.calculate-btn:hover {
+  background: var(--accent);
+  color: var(--accent-foreground);
+  box-shadow: var(--shadow-md);
+}
+
+.result-box {
+  margin-top: 50px;
+  padding: 40px;
+  background: var(--card);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.result-box h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--foreground);
+  text-align: center;
+}
+
+.result-box p {
+  font-size: 24px;
+  line-height: 1.6;
+}
+
+.info-message {
+  text-align: center;
+  padding: 50px;
+  color: var(--muted-foreground);
+  background: var(--secondary);
+  border-radius: var(--radius);
+  border: 2px dashed var(--border);
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+/* ── Income / Deduction 2-column grid ──────────────────────────────────────── */
+.income-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 48px;
+}
+
+.income-col {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Individual field card */
+.inc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inc-label-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.inc-label {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--foreground);
+  line-height: 1.4;
+}
+
+/* ₹ prefix input wrapper */
+.rupee-input-wrap {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.rupee-input-wrap:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 15%, transparent);
+}
+
+.rupee-prefix {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  background: var(--secondary);
+  border-right: 1.5px solid var(--border);
+  height: 56px;
+  min-width: 48px;
+  user-select: none;
+}
+
+.rupee-input {
+  flex: 1;
+  padding: 0 16px;
+  height: 56px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--foreground);
+  background: transparent;
+  border: none !important;
+  outline: none;
+  box-shadow: none !important;
+  /* Remove spinner arrows in number input */
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.rupee-input::-webkit-outer-spin-button,
+.rupee-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 700px) {
+  .income-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

@@ -1,0 +1,145 @@
+/* AIAssistantModal.css */
+.ai-modal {
+    max-width: 500px;
+    width: 90%;
+    background: #0f172a;
+    /* Dark theme */
+    color: white;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #334155;
+    border-radius: 16px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.ai-header {
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    padding: 24px;
+    text-align: center;
+}
+
+.ai-header h2 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+}
+
+.ai-header p {
+    margin: 0;
+    color: #e0e7ff;
+    font-size: 14px;
+}
+
+.ai-body {
+    padding: 24px;
+}
+
+.drop-zone {
+    border: 2px dashed #475569;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: #1e293b;
+}
+
+.drop-zone:hover {
+    border-color: #818cf8;
+    background: #252b3d;
+}
+
+.drop-zone .icon {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.drop-zone p {
+    color: #94a3b8;
+    margin: 0;
+    font-weight: 500;
+}
+
+.upload-btn,
+.proceed-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.upload-btn {
+    background: #3b82f6;
+    color: white;
+}
+
+.upload-btn:disabled {
+    background: #475569;
+    cursor: not-allowed;
+}
+
+.upload-btn:not(:disabled):hover {
+    background: #2563eb;
+}
+
+.proceed-btn {
+    background: #22c55e;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.retry-btn {
+    width: 100%;
+    background: transparent;
+    border: 1px solid #475569;
+    color: #94a3b8;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 20px 0;
+}
+
+.data-item {
+    background: #1e293b;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.data-item label {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-bottom: 4px;
+}
+
+.data-item span {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.error-text {
+    color: #ef4444;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.data-note {
+    font-size: 13px;
+    color: #94a3b8;
+    text-align: center;
+    margin-bottom: 20px;
+}
