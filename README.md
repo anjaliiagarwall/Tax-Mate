@@ -39,7 +39,7 @@ Node.js/Express backend and integrates AI (via OpenRouter) to provide real-time
 tax assistance, PDF receipt scanning, and tax calculation under both Old and New
 tax regimes.
 
-> 💡 Built as a BCA Project — designed to demonstrate full-stack web development
+> 💡 Built as a  Project — designed to demonstrate full-stack web development
 > skills with real-world AI integration.
 
 ---
@@ -247,7 +247,7 @@ OPENROUTER_API_KEY=your_openrouter_api_key_here
 | `PUT` | `/users/:id/role` | Promote or demote user role |
 | `DELETE` | `/users/:id` | Delete a user |
 
----
+
 
 ## 🤝 Contributing
 
@@ -257,21 +257,11 @@ OPENROUTER_API_KEY=your_openrouter_api_key_here
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
----
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
-
----
 
 <div align="center">
 
 
 
 </div>
-```
-
----
 
 > 
