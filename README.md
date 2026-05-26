@@ -48,7 +48,7 @@ tax regimes.
 | Feature | Description |
 |---|---|
 | 🔐 **User Authentication** | Secure register/login with JWT tokens and bcrypt password hashing |
-| 🧮 **Tax Calculator** | Calculate income tax under Old & New regime (FY 2024-25) |
+| 🧮 **Tax Calculator** | Calculate income tax under Old & New regime|
 | 🤖 **AI Tax Chatbot** | Ask any tax question and get instant AI-powered answers |
 | 📄 **PDF Receipt Scanner** | Upload receipts/documents and extract tax-relevant data using AI |
 | 📊 **Tax Dashboard** | Visual charts showing your income, deductions & tax breakdown |
